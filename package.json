@@ -1,0 +1,39 @@
+{
+  "name": "sveltegame",
+  "version": "1.0.0",
+  "description": "SvelteKit mobile game engine template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "game",
+    "mobile",
+    "pwa",
+    "game-engine"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/kit": "^2.49.2",
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "@testing-library/svelte": "^5.2.9",
+    "jsdom": "^27.3.0",
+    "svelte": "^5.46.0",
+    "svelte-check": "^4.3.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.0",
+    "vitest": "^4.0.15"
+  }
+}

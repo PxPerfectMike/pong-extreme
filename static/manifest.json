@@ -1,0 +1,28 @@
+{
+	"name": "SvelteGame",
+	"short_name": "SvelteGame",
+	"description": "A mobile game built with SvelteKit",
+	"start_url": "/",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"background_color": "#1a1a2e",
+	"theme_color": "#e94560",
+	"icons": [
+		{
+			"src": "/icons/icon-192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/icons/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "/icons/icon-512-maskable.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	]
+}
