@@ -67,9 +67,11 @@
 	// Opponent paddle horizontal position
 	const opponentPaddleX = $derived(() => {
 		if (isGuest) {
-			return ARENA_WIDTH - gameState.paddle1Y; // Host's paddle, flipped
+			// Guest views host: host doesn't invert input, so we invert for display
+			return ARENA_WIDTH - gameState.paddle1Y;
 		}
-		return ARENA_WIDTH - gameState.paddle2Y; // Guest's paddle, flipped
+		// Host views guest: guest already inverts input, so NO inversion needed
+		return gameState.paddle2Y;
 	});
 
 	// Touch handling - controls horizontal paddle position

@@ -209,10 +209,10 @@ describe('Game Physics', () => {
 	describe('startBall', () => {
 		it('should set ball velocity towards a player', () => {
 			const result = startBall('player1');
-			expect(result.ballVelX).toBeGreaterThan(0); // Moving right (towards player1 side)
+			expect(result.ballVelX).toBeLessThan(0); // Moving left (towards player1 who is on LEFT side)
 
 			const result2 = startBall('player2');
-			expect(result2.ballVelX).toBeLessThan(0); // Moving left (towards player2 side)
+			expect(result2.ballVelX).toBeGreaterThan(0); // Moving right (towards player2 who is on RIGHT side)
 		});
 
 		it('should have initial speed magnitude', () => {

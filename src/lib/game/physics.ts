@@ -200,8 +200,9 @@ export function startBall(towardsPlayer: 'player1' | 'player2'): BallState {
 	// Random vertical angle between -45 and 45 degrees
 	const angle = (Math.random() - 0.5) * (Math.PI / 2);
 
-	// Direction: positive X = towards right (player1 side), negative = towards left (player2 side)
-	const direction = towardsPlayer === 'player1' ? 1 : -1;
+	// Player1 is on LEFT (X=0), Player2 is on RIGHT (X=100)
+	// Negative X = towards left (player1), Positive X = towards right (player2)
+	const direction = towardsPlayer === 'player1' ? -1 : 1;
 
 	return {
 		ballX: 50,
