@@ -1,7 +1,7 @@
 {
-	"name": "SvelteGame",
-	"short_name": "SvelteGame",
-	"description": "A mobile game built with SvelteKit",
+	"name": "Pong Extreme",
+	"short_name": "Pong Extreme",
+	"description": "Mobile multiplayer Pong battle game",
 	"start_url": "/",
 	"display": "fullscreen",
 	"orientation": "portrait",

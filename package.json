@@ -1,13 +1,17 @@
 {
-  "name": "sveltegame",
+  "name": "pong-extreme",
   "version": "1.0.0",
-  "description": "SvelteKit mobile game engine template",
+  "description": "Mobile multiplayer Pong game",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite dev",
+    "dev:party": "partykit dev",
+    "dev:all": "concurrently \"npm run dev\" \"npm run dev:party\"",
     "build": "vite build",
+    "build:party": "partykit build",
     "preview": "vite preview",
+    "deploy:party": "partykit deploy",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test": "vitest",
@@ -37,11 +41,17 @@
     "@sveltejs/kit": "^2.49.2",
     "@sveltejs/vite-plugin-svelte": "^6.2.1",
     "@testing-library/svelte": "^5.2.9",
+    "concurrently": "^9.2.1",
     "jsdom": "^27.3.0",
     "svelte": "^5.46.0",
     "svelte-check": "^4.3.4",
     "typescript": "^5.9.3",
     "vite": "^7.3.0",
     "vitest": "^4.0.15"
+  },
+  "dependencies": {
+    "@sveltejs/adapter-vercel": "^6.2.0",
+    "partykit": "^0.0.115",
+    "partysocket": "^1.1.6"
   }
 }

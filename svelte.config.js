@@ -13,7 +13,11 @@ const config = {
 			strict: true
 		}),
 		alias: {
-			$engine: 'src/lib/engine'
+			$engine: 'src/lib/engine',
+			$game: 'src/lib/game',
+			$scenes: 'src/lib/scenes',
+			$stores: 'src/lib/stores',
+			$party: 'src/lib/party'
 		}
 	}
 };

@@ -8,6 +8,7 @@ node_modules/
 build/
 dist/
 .svelte-kit/
+.vercel/
 
 # Environment files
 .env

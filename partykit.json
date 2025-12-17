@@ -1,0 +1,9 @@
+{
+  "$schema": "https://www.partykit.io/schema.json",
+  "name": "pong-extreme",
+  "main": "party/game.ts",
+  "parties": {
+    "matchmaker": "party/matchmaker.ts",
+    "game": "party/game.ts"
+  }
+}
