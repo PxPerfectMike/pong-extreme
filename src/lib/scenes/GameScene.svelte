@@ -56,9 +56,10 @@
 	});
 
 	// Local paddle horizontal position (paddle moves horizontally on screen)
+	// Guest's view is mirrored, so we invert the paddle position for consistent display
 	const localPaddleX = $derived(() => {
 		if (isGuest) {
-			return gameState.paddle2Y; // Guest's paddle
+			return ARENA_WIDTH - gameState.paddle2Y; // Guest's paddle, mirrored to match ball display
 		}
 		return gameState.paddle1Y; // Host's paddle
 	});
@@ -90,6 +91,12 @@
 		// Touch X position maps to paddle Y in physics (horizontal movement on screen)
 		const relativeX = (touch.clientX - rect.left) / rect.width;
 		let paddleY = relativeX * ARENA_WIDTH;
+
+		// For guest, invert the paddle position because their display is mirrored
+		// This ensures their paddle moves correctly in physics coordinates
+		if (isGuest) {
+			paddleY = ARENA_WIDTH - paddleY;
+		}
 
 		// Clamp to valid paddle range
 		const minY = PADDLE_HEIGHT / 2;
